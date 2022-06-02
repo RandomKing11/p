@@ -1,0 +1,106 @@
+Program 2:(Method overloading)
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+
+        static void Area(int x , int y){
+            int area = x*y;
+        Console.WriteLine("Area of the rectangle is " + area);
+        }
+        static int Area2(int g) {
+            int area = g * g;
+            Console.WriteLine("Area of square is " + area);
+            return area;
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Choose one of the options below");
+            Console.WriteLine("1. rectangle , 2.Square");
+            int a = Convert.ToInt32(Console.ReadLine());
+            switch (a)
+            {
+                case 1:
+                    Console.WriteLine("Enter the length of the rectangle");
+                    int i = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine("Enter breath of the rectangle");
+                    int j = Convert.ToInt32(Console.ReadLine());
+
+                    Area(i, j);
+                    break;
+
+                case 2:
+                    Console.WriteLine("Enter the side of the sqare");
+                    int z = Convert.ToInt32(Console.ReadLine());
+                    Area2(z);
+                    Console.WriteLine();
+                    break;
+
+                default: Console.WriteLine("Enter an valid input");
+                    break;
+
+                    }
+            Console.ReadLine();
+            
+        
+        }
+
+       }
+    }
+
+Program 8:(Button Control)
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace OPTION
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked==true)
+            {
+                var a = Convert.ToInt32(textBox1.Text);
+                if (a % 2 == 0)
+                {
+                    MessageBox.Show("The number is even. Number=" +a);
+
+                }
+                else
+                {
+                    MessageBox.Show("The number is odd. Number=" + a);
+                }
+            }
+            if (radioButton2.Checked == true)
+            {
+                var a = Convert.ToInt32(textBox1.Text);
+                if (a > 0)
+                {
+                    MessageBox.Show("Number is positive. Number=" +a);
+
+                }
+                else
+                {
+                    MessageBox.Show("Number is Negative. Number=" + a);
+                }
+            }
+
+
+
+
+        }
+    }
+}
