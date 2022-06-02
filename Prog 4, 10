@@ -1,0 +1,104 @@
+Program 4:(Interface)
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace program_4_charp
+{
+interface GFG1
+{
+void details();
+}
+interface GFG2
+{
+int marks();
+}
+class inter : GFG1, GFG2
+{
+public void details()
+{
+int r;
+string n;
+Console.WriteLine("Enter your Roll Number:");
+r = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your Name :");
+n = Console.ReadLine();
+}
+public int marks()
+{
+int m1, m2, m3, t;
+Console.WriteLine("Enter your first Subject Mark:");
+m1 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your second Subject Mark:");
+m2 = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter your third Subject Mark:");
+m3 = int.Parse(Console.ReadLine());
+t = m1 + m2 + m3;
+return t;
+}
+}
+class Program
+{
+static void Main(string[] args)
+{
+inter obj = new inter();
+obj.details();
+int tot = obj.marks();
+float p = tot / 3.0f;
+Console.WriteLine("Total =" + tot);
+Console.ReadLine();
+Console.WriteLine("Percentage =" + p);
+Console.ReadLine();
+}
+}}
+
+Program 10 - CODING 1:(Navigate URL)
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body bgcolor="pink">
+<form id="form1" runat="server">
+<div>
+<center><h1><font color=olive>NAVIGATE URL</font></h1></center>
+<p><font color=purple size=4>
+SKASC is our College Website which has a name for its infrastructure and students discipline
+behavior!!!<br />
+<font color="orange"> Sri Krishna Arts and Science College with a vision of "Fitness for
+Purpose" established in the year 1997 is an autonomous Institution <br /></font><font
+color=green>imparting Quality Education imbibing scientific and artistic knowledge to the
+needs of the current generation.
+A College offering 32 Undergraduate Programmes 13 Post Graduate Programmes 7 Research
+Programmes and one Integrated Programme is re-accredited with ‘A’ Grade by the National
+Assessment </font>and Accreditation Council (NAAC).<br />
+CLICK ON TO OUR WEBSITE</font>
+</p><br />
+<asp:HyperLink ID="HyperLink1" runat="server" text="SKASC WEBSITE"
+NavigateUrl="http://www.skasc.ac.in">Click here</asp:HyperLink><br /><br />
+<asp:HyperLink ID="HyperLink2" NavigateUrl="~/Default2.aspx" Text="Next page"
+runat="server">NEXT PAGE</asp:HyperLink>
+</div>
+</form>
+</body>
+</html>
+
+PROGRAM 10 - CODING 2:
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<title></title>
+</head>
+<body bgcolor="lime">
+<form id="form1" runat="server">
+<div>
+<center><p><font color="Red" size=4.5>Welcome to our page!!!</font></p>
+<img src="img/download (1).jpg" alt="welcome" height="400px" width="400px"></center>
+</div>
+</form>
+</body>
+</html>
