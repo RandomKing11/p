@@ -1,0 +1,104 @@
+Porogram 3: (Array List)
+
+using System;
+using System.Collections;
+public class Program
+{
+public static void Main()
+{
+ArrayList myList = new ArrayList();
+myList.Add("Samantha");
+myList.Add("Sneha");
+myList.Add("Sabareesh");
+myList.Add("renitta");
+myList.Add("Sharom");
+Console.WriteLine("Initial Array : ");
+foreach (string str in myList)
+{
+Console.WriteLine(str);
+}
+myList.Insert(1, "Felix");
+myList.Insert(4, "Sam");
+myList.Insert(5, "Kelvin");
+Console.WriteLine("After Insertion: ");
+foreach (string stri in myList)
+{
+Console.WriteLine(stri);
+}
+Console.WriteLine("After sort: ");
+myList.Sort();
+foreach (string arr in myList)
+{
+Console.WriteLine(arr);
+}
+Console.WriteLine("After Reverse: ");
+myList.Reverse();
+for (int i = 0; i < myList.Count; i++)
+{
+Console.WriteLine(myList[i]);
+}
+Console.WriteLine("Enter values to be merge: ");
+string[] answer = new string[10];
+for (int i = 0; i < 5; i++)
+{
+answer[i] = Console.ReadLine();
+}
+Console.WriteLine("Merged array: ");
+myList.AddRange(answer);
+for (int i = 0; i < myList.Count; i++)
+{
+Console.WriteLine(myList[i]);
+}
+Console.ReadLine();
+}
+}
+
+
+Program 9: (Combo box and list box)
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+
+namespace prg9
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string txt = textBox1.Text;
+            listBox1.Items.Add(txt);
+            comboBox1.Items.Add(txt);
+            textBox1.Text = "";
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedIndex != -1)
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            }
+            if (comboBox1.SelectedIndex != -1)
+            {
+                comboBox1.Items.RemoveAt(comboBox1.SelectedIndex);
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            comboBox1.Items.Clear();
+        }
+    }
+}
