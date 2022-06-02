@@ -97,10 +97,6 @@ namespace OPTION
                     MessageBox.Show("Number is Negative. Number=" + a);
                 }
             }
-
-
-
-
         }
     }
 }
